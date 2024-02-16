@@ -42,7 +42,7 @@ func EjecutoLambda(ctx context.Context, event events.CognitoEventUserPoolsPostCo
 		fmt.Println("error al leer el secret " + err.Error())
 		return event, err
 	}
-	return event, nil
+
 	err = bd.SignUp(datos)
 	return event, err
 }
